@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  nginx-api-demo:
+    image: nginx:1.21.4-alpine
+    restart: always
+    ports:
+      - 8080:80
+      - 8081:8081
+      - 8082:8082
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./scripts:/etc/nginx/script
